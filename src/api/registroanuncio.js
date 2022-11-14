@@ -4,6 +4,7 @@ export async function registroanuncio(nombreanuncio,precio,compra,file,tags)
   console.log(precio)
   console.log(compra)
   console.log(file)
+  console.log(tags)
 
   const Token=localStorage.getItem("token");
     const registrar = async (nombreanuncio,precio,compra,file,tags) => {
@@ -19,10 +20,11 @@ export async function registroanuncio(nombreanuncio,precio,compra,file,tags)
         'Authorization': 'Bearer ' + Token ,
       },
       body: JSON.stringify({name: nombreanuncio, sale: compra,price: precio,tags:tags})
+    
     });
     const content = await rawResponse.json();
   
-    //console.log(content);
+    console.log("content: ",content);
     
 if (content.id) {
     mensaje="registro exitoso username"

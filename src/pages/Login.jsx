@@ -77,7 +77,7 @@ async function hacerlogin(){
 
 
 <div className='mt-3 wrap justify-center flex'>
-  <button className='w-64 mt-4 bg-gray-300 uppercase rounded shadow-md hover:bg-gray-400  transition duration-150 ' type="submit" onClick={hacerlogin}>Login</button>
+  <button className='w-64 mt-4 bg-gray-300 uppercase rounded shadow-md hover:bg-gray-400  transition duration-150 ' type="submit" onClick={()=>hacerlogin()}>Login</button>
   </div>
   
     </section>

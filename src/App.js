@@ -55,7 +55,7 @@ let logueado2=""
         
         
         <Route path="/anucnios" element={<AdvertsPage/>}/>
-        <Route path="/anuncio:id" element={<Anuncio/>}/>
+        <Route path="/anuncio" element={<Anuncio/>}/>
 
         <Route path="/nuevoanuncio" element={<Nuevoanucio/>}/>
         <Route path="/logout" element={<Logout/>}/>
@@ -77,7 +77,7 @@ let logueado2=""
         <Route path="/login" element={<Login/>}/>
         
         <Route path="/anucnios" element={<AdvertsPage/>}/>
-        <Route path="/anuncio:id" element={<Anuncio/>}/>
+        <Route path="/anuncio" element={<Anuncio/>}/>
         <Route path="/signin" element={<Signin/>}/>
         <Route path="/logout" element={<Logout/>}/>
         <Route path="*" element={<Pagina404/>}/>
