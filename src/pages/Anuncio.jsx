@@ -33,7 +33,7 @@ export default function Anuncio() {
       <div className='w-full ml-5 mr-5 mt-5'><h1>Anuncio</h1></div>
       <div className='w-full ml-5 mr-5 mt-5'><h2>Nombre: {anuncio.name}</h2></div>
       <div className='w-full ml-5 mr-5 mt-5'><h2>Precio: {anuncio.price}</h2></div>
-      <div className='w-full ml-5 mr-5 mt-5'><h2>Tags: {anuncio.tags[0]}</h2></div>
+      <div className='w-full ml-5 mr-5 mt-5'><h2>Tags: {anuncio.tags}</h2></div>
 
 
     </div>
