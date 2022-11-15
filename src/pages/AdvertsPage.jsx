@@ -33,9 +33,7 @@ export default function AdvertsPage() {
           <h2>compra: {compra}</h2>
           
           <h2>tags: {anuncio.tags[0]}</h2>
-          <div className='mt-3 wrap justify-center flex'>
-  <button className='w-64 mt-4 bg-red-700 uppercase rounded shadow-md hover:bg-gray-400  transition duration-150 ' type="submit" onClick={()=>Borrar(anuncios.id)}>Borrar</button>
-  </div>
+        
 
           <hr className='mb-2 mt-2' />
         </div>,
@@ -56,7 +54,7 @@ export default function AdvertsPage() {
   
 
   return (
-    <section className='w-full ml-2 mr-2 mt-5 justify-center'>    
+    <div className='w-full ml-2 mr-2 mt-5 justify-center'>    
     <h1 >Anuncios</h1>
 
     <div className='w-full justify-center   mt-4'>
@@ -64,7 +62,7 @@ export default function AdvertsPage() {
     </div>
     
     
-    </section>
+    </div>
 
   )
 }
