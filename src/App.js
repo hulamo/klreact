@@ -2,19 +2,18 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
 
 import AdvertsPage from "./pages/AdvertsPage"
 
-import logo from './logo.svg';
 import './App.css';
 
 import Login from "./pages/Login";
 import Anuncio from "./pages/Anuncio";
 import Signin from "./pages/Signin";
 import Nuevoanucio from "./pages/Nuevoanucio";
-import Principal from "./pages/Principal";
+
 import Header from "./components/Header";
-import React, { useState, useEffect,createContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Pagina404 from "./pages/Pagina404";
 import Logout from "./pages/Logout";
-export const LogContext = React.createContext();
+
 function App() {
   
   const[logueado,setLogueado] = useState(false);
@@ -34,7 +33,7 @@ function App() {
 
     //console.log(logueado)
   },[]);
-let logueado2=""
+
   return (
 
     <Router>
@@ -70,7 +69,7 @@ let logueado2=""
         
         
         
-        <Route path="/" element={<AdvertsPage/>}/>
+        <Route path="/" element={<Login/>}/>
       
         
         

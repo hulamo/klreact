@@ -1,9 +1,9 @@
 import React from 'react'
 import {useLocation, useNavigate} from "react-router-dom"
 
-import { useState, useEffect,onLoad } from 'react';
+
 import { useAuth } from '../api/checarLog'
-import LogCheck from "../api/LogCheck"
+
 function Header(tlogueado) {
 
     
@@ -35,7 +35,7 @@ function pathMathRoute(route){
     <div><p onClick={()=>navigate("/")} className='cursor-pointer h-5'>App de Anuncios</p></div>
 <div>
 <ul className='flex space-x-5'>
-    <li onClick={()=>navigate("/")} className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-4 border-b-transparent ${pathMathRoute("/") && "text-black border-b-red-500"} `}>Principal</li>
+{logueado3 ? (<li onClick={()=>navigate("/")} className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-4 border-b-transparent ${pathMathRoute("/") && "text-black border-b-red-500"} `}>Principal</li>):(<p></p>)}
    
     {logueado3 ? ( <li onClick={()=>navigate("/nuevoanuncio")} className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-4 border-b-transparent ${pathMathRoute("/nuevoanuncio") && "text-black border-b-red-500"} `}>Nuevo Anuncio</li>):(
 
