@@ -13,7 +13,7 @@ import Header from "./components/Header";
 import React, { useState, useEffect } from 'react';
 import Pagina404 from "./pages/Pagina404";
 import Logout from "./pages/Logout";
-
+import { AuthContext } from './Context.js';
 function App() {
   
   const[logueado,setLogueado] = useState(false);

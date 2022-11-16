@@ -41,19 +41,20 @@ export default function AdvertsPage() {
     // fetch data
     const dataFetch = async () => {
       const data = await jsonAnuncios()
-
+console.log("data: ", data)
       // set state when the data received
       setAnuncios(data);
       setAnunciosf(data)
+      getanuncios(data)
     };
 
     dataFetch();
-    getanuncios(anuncios)
+    
   }, []);
   
 
 
-  function getanuncios(tempanuncios) {
+  async function getanuncios(tempanuncios) {
    //setAnuncios(await getadverts())
   
    console.log("tempanuncios",tempanuncios)
@@ -87,17 +88,22 @@ export default function AdvertsPage() {
 
 
   function onChange(e){
-    console.log(e.target.value)
+    console.log("Target",e.target.value)
     setFiltro(e.target.value)
     const tempfiltro=e.target.value
-     const tempfiltrar = anuncios.filter(l => {
+    var tempfiltrar=[]
+    if (tempfiltro!=="") {
+    tempfiltrar = anuncios.filter(l => {
         return l.name.toLowerCase().includes( tempfiltro.toLowerCase() );
-      })
+      })} else{
+        tempfiltrar=anuncios
+      }
 
       //const tempfiltrar = anuncios.filter(function (str) { return str.includes(filtro); });
       //var tempfiltrar = anuncios.filter(name => name.includes(e.target.value))
       console.log("Filtro: ",tempfiltrar)
-   if (e.target.value !== ""){
+   console.log("Largo: ",tempfiltro.lenght)
+      if (tempfiltro !==""){
  getanuncios(tempfiltrar)} else {
   getanuncios(anuncios)
  }
